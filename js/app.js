@@ -60,11 +60,11 @@ function mostrarSecciones(){
 }
 
 function obtenerPlatillos(){
-    const url = 'http://localhost:4000/platillos';
+    const url = 'db.json';
 
     fetch(url)
         .then(respuesta => respuesta.json())
-        .then(resultado => mostrarPlatillos(resultado))
+        .then(resultado => mostrarPlatillos(resultado.platillos))
 }
 
 function mostrarPlatillos(platillos){
